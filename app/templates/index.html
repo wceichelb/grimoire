@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+  {% if current_user %}
+    {{ current_user }}
+  {% else %}
+    no login
+  {% endif %}
+{% endblock %}

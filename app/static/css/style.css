@@ -1,0 +1,1823 @@
+body { padding-top:50px; text-size: 24px; }
+body>.navbar{-webkit-transition:background-color 300ms ease-in;transition:background-color 300ms ease-in}@media (min-width:768px){body>.navbar-transparent{background-color:transparent}body>.navbar-transparent .navbar-nav>.open>a{background-color:transparent!important}}#home{padding-top:0}#home .navbar-brand{padding:13.5px 15px 12.5px}#home .navbar-brand>img{display:inline;margin:0 10px;height:100%}#banner{min-height:300px;border-bottom:none}.page-header h1{font-size:4em}.bs-docs-section{margin-top:8em}.bs-component{position:relative}.bs-component .modal{position:relative;top:auto;right:auto;left:auto;bottom:auto;z-index:1;display:block}.bs-component .modal-dialog{width:90%}.bs-component .popover{position:relative;display:inline-block;width:220px;margin:20px}#source-button{position:absolute;top:0;right:0;z-index:100;font-weight:700}.nav-tabs{margin-bottom:15px}.progress{margin-bottom:10px}footer{margin:5em 0}footer li{float:left;margin-right:1.5em;margin-bottom:1.5em}footer p{clear:left;margin-bottom:0}.splash{padding:9em 0 2em;background-color:#141d27;background-image:url(../img/bg.jpg);background-size:cover;background-attachment:fixed;color:#fff;text-align:center}.splash .logo{width:160px}.splash h1{font-size:3em}.splash #social{margin:2em 0}.splash .alert{margin:2em 0}.section-tout{padding:4em 0 3em;border-bottom:1px solid rgba(0,0,0,.05);background-color:#eaf1f1}.section-tout .fa{margin-right:.5em}.section-tout p{margin-bottom:3em}.section-preview{padding:4em 0 4em}.section-preview .preview{margin-bottom:4em;background-color:#eaf1f1}.section-preview .preview .image{position:relative}.section-preview .preview .image:before{box-shadow:inset 0 0 0 1px rgba(0,0,0,.1);position:absolute;top:0;left:0;width:100%;height:100%;content:"";pointer-events:none}.section-preview .preview .options{padding:1em 2em 2em;border:1px solid rgba(0,0,0,.05);border-top:none;text-align:center}.section-preview .preview .options p{margin-bottom:2em}.section-preview .dropdown-menu{text-align:left}.section-preview .lead{margin-bottom:2em}@media (max-width:767px){.section-preview .image img{width:100%}}.sponsor{text-align:center}.sponsor a:hover{text-decoration:none}@media (max-width:767px){.splash{padding-top:4em}.splash .logo{width:100px}.splash h1{font-size:2em}#banner{margin-bottom:2em;text-align:center}}
+
+@media (max-width:1640px) and (min-width:1325px){
+	.container {
+	  margin-right: auto;
+	  margin-left: 335px;
+	  width: 970px;	 
+	}
+
+	.joesterMode .container
+	{
+		width: 1170px;
+	}
+}
+
+@media (max-width:1250px) and (min-width:768px){
+	.navbar-nav>li {
+  		font-size: 12px;
+	}
+	.nav>li>a {
+	  padding-left: 9px;
+	  padding-right: 9px;
+	}
+}
+
+.navbar-toggle .icon-bar-2 {
+  display: inline-block;
+  width: 2px;  
+}
+
+.dropdown-menu>li>p
+{
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #7b8a8b;
+  white-space: nowrap;
+}
+
+#tools,
+#tools.collapse
+{
+	position: absolute;
+	left:10px;
+	top:70px;	  
+	width: 377px;
+  	display: block;
+	background-color: #2c3e50;
+	top: 60px;
+	left: 0;
+		padding-top: 10px;
+		color:#fff;
+		position: fixed;
+	  height: calc(100% - 60px);
+	  overflow: auto;
+	  width: 381px;
+}
+
+	#tools div
+	{
+	  color: #2c3e50;
+	}
+
+html .joesterMode .page
+{	
+  margin: 1cm 0 1cm 50px;
+}	
+
+#tools.collapse.in
+{
+	display: block!important;
+	z-index: 1000;		
+}
+  
+@media (max-width:1325px){
+	#tools, 
+	#tools.collapse
+	{
+		display: none;
+	}
+	.container {
+		margin-left:auto;
+	}
+	#toolsbar
+	{
+	  position: absolute;
+	  left: 15px;
+	  top: -5px;
+	  display: block;
+	}
+	.navbar-brand
+	{
+		margin-left: 200px!important;
+	}
+
+}
+
+.joesterMode #tools.collapse
+{	
+	display: none;
+}
+
+.joesterMode .container {
+	margin-left:auto;
+}
+.joesterMode #toolsbar
+{
+  position: absolute;
+  left: 15px;
+  top: -5px;
+  display: block;
+}
+.joesterMode .navbar-brand
+{
+	margin-left: 110px!important;
+}
+
+html #searchSpell
+{
+  width: 150px;
+  position: absolute;
+  left:15px;
+  top: 7px;
+  display: block;
+}
+
+@media (max-width:1325px){
+	html #searchSpell
+	{
+		left: 60px;
+	}	
+
+	.navbar .container
+	{
+		width:auto!important;
+	}
+}
+
+@media (max-width:768px){
+
+	.navbar-brand
+	{
+		margin-left: 50px!important;
+	}
+	html #searchSpell
+	{	
+		left:auto;
+		right: 67px;
+		display: block;
+	}
+	html .page
+	{
+  		width:100%;
+  		min-height: 0;
+  		box-shadow: none;
+  		border: 0;
+  		background: transparent;
+  		display: inline-block;
+  		text-align: center;
+		padding: 0cm 0;
+		margin: 10px auto;
+	}
+
+	html .spellbook .card h1 {
+	  font-size: 24pt;	  
+	}	
+
+	html .spellbook .page:before {	  
+	  width: 100%;
+	  height: auto;
+	  display: block;
+	  font-size: 20pt;
+	  padding: 8.7cm 0 3cm;
+	  text-align: center;
+	  margin-left: 0;
+	}
+
+	html .mirrorpage.page
+	{
+		display: none;
+	}
+
+	html .subpage
+	{
+		text-align: center;
+	}
+
+	.container .nomobile
+	{
+		margin:5px 0!important;
+	}
+}
+
+@media (max-width:420px){
+	html #searchSpell
+	{
+		width: 130px;
+	}
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ico
+{
+  display: inline-block;
+  margin: 0 0 0 5px;
+  padding: 0;
+  border: 1px solid #ccc;
+  width: 21px;
+  height: 21px;
+  text-align: center;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+.ico:hover
+{
+	background: #eee;
+}
+
+.bold
+{
+	font-weight: bold;	
+	color: #000;
+	text-decoration: none;
+}
+
+body {    
+    background-color: #FAFAFA;
+    font-size: 12pt;	
+}
+
+
+.simplefont,
+.simplefont *
+{
+    
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.page {
+    width: 21cm;
+    min-height: 29.7cm;
+    padding: 1cm .5cm;	
+    margin: 20px auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);	
+    position:relative;
+    display: block;
+}
+
+.landscape .page {
+    width: 29.7cm;
+    min-height: 21cm;
+    padding: 1cm;	
+    margin: 1cm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);	
+    position:relative;
+}
+.subpage {    
+	text-align: left;
+	font-size: 0;
+	/*margin-left: .5cm;*/
+}
+	
+	
+	.editing .card
+	{
+	    opacity: 0.4;
+	}
+	
+            .page {
+              -webkit-perspective: 800px;
+                 -moz-perspective: 800px;
+                   -o-perspective: 800px;
+                      perspective: 800px;
+            }
+            
+            .card {
+              -webkit-transition: -webkit-transform 1s;
+                 -moz-transition: -moz-transform 1s;
+                   -o-transition: -o-transform 1s;
+                      transition: transform 1s;
+              -webkit-transform-style: preserve-3d;
+                 -moz-transform-style: preserve-3d;
+                   -o-transform-style: preserve-3d;
+                      transform-style: preserve-3d;
+            }
+
+            
+            .card .front, 
+            .card .back {
+              display: block;
+              height: 100%;
+              width: 100%;
+              position: absolute;
+              -webkit-backface-visibility: hidden;
+                 -moz-backface-visibility: hidden;
+                   -o-backface-visibility: hidden;
+                      backface-visibility: hidden;
+            }
+            
+           .card .front {
+              -webkit-transition: opacity 1s;
+                 -moz-transition: opacity 1s;
+                   -o-transition: opacity 1s;
+                      transition: opacity 1s;
+            }
+            
+            .card .back {
+              -webkit-transform: rotateY( 180deg );
+                 -moz-transform: rotateY( 180deg );
+                   -o-transform: rotateY( 180deg );
+                      transform: rotateY( 180deg );
+            }
+            
+            .flipped.card .front {
+              opacity:0!important;
+            }
+              	
+
+	.editing .card:hover
+	{
+	    opacity:0.7;
+	}
+	.editing .card.select{
+        opacity:1;
+	}
+	
+	.level-t, .level-b
+	{
+	    position: absolute;
+        font-size: 54px;
+	}
+	
+	.level-t
+	{
+        top: 24px;
+        right: 26px;		  
+	}
+	.level-b
+	{
+        bottom: 24px;
+        left: 26px;
+		text-align: left;
+		width: 45px;        
+	}	
+	
+
+	
+	.tools
+	{
+		position:absolute;		
+		width:23%;
+	}
+	
+	.tools-div
+	{		
+		margin:0 0 20px;
+		padding:20px;
+		border: 1px #D3D3D3 solid;
+	    border-radius: 5px;
+	    background: white;
+	}	
+	
+	#ym
+	{
+		position:absolute;
+	    box-shadow:0 0 5px #000;
+	    z-index:200;
+	}
+	
+	.show{
+		display:block!important;
+	}
+	
+	.home
+	{
+	    position:absolute;
+	    top:10px;
+	    left:1cm;
+	    font-weight:bold;
+	    color:#000;
+	}
+	.home a
+	{
+	    color:#000;
+	}
+	
+	.create
+	{
+	    position:absolute;
+	    top:10px;
+	    left:5cm;
+	    font-weight:bold;
+	    color:#000;
+	}
+	
+	.thanks
+	{
+		position: absolute;
+		top: 10px;
+		left: 60%;
+		font-weight: normal;
+		color: #ccc;
+		font-size: 13px;
+	}	
+	
+	.thanks:hover
+	{
+	    cursor:pointer;
+	    color:#333;
+	}
+	
+	.hint
+	{
+	    color:#333;
+	    display:inline-block;
+	    border-bottom:1px dotted #333;
+	    cursor:help;
+	}
+	.hint-body
+	{
+	    display:none;
+	    position:absolute;
+	    background:#ffffee;
+	    border:1px dotted #efefef;
+	    font-size:12px;
+	    padding:5px;
+	    box-shadow:0 0 5px #000;
+	    width:500px;
+	    z-index:200;
+	}	
+	.social *
+	{
+	    box-sizing: content-box;
+	    -moz-box-sizing: content-box;
+	}
+	
+	ul.socialwrap {
+        list-style-type: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    ul.socialwrap li {
+        padding-left: 0 !important;
+        background-image: none !important;
+        margin-left: 0 !important;
+        list-style-type: none !important;
+        text-indent: 0 !important;
+        display:inline-block;
+    }	
+    ul.socialwrap li a {
+        text-decoration: none;
+    }
+    li.iconOnly a span.head {
+        display: none;
+    }
+    
+    .downloadlink
+    {
+        display:inline-block;
+        position: absolute;
+        top: 14px;
+        width: 19cm;
+        margin-left: 0.5cm;
+    }
+    
+    #cancel{
+        float:right;
+        margin-left:10px;
+        display:none;
+    }
+    #getUrl{
+        float:right;
+        margin-left:10px;
+        display:none;
+    }
+    .editing #cancel{
+        display:inline;
+    }
+    .editing #getUrl{
+        display:inline;
+    }    
+    
+    .COINWIDGETCOM_CONTAINER
+    {
+        vertical-align:top;
+    }
+    
+    .yashare-auto-init
+    {
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    body .b-share__handle {
+    padding: 1px 4px 5px 2px!important;
+    }    
+    
+    body .b-share {
+    padding: 1px 3px 1px 4px!important;
+    vertical-align: top;
+    }
+    
+    
+.landscape .page {
+        margin:1cm 1cm 1cm auto;
+    }    
+    
+
+@media screen and (max-width: 1300px){
+ /*   .page {
+        margin:1cm 10px 1cm auto;
+        zoom: 0.8;
+    }
+    .tools {
+        width: 33%!important;
+    }
+	.noprint {
+	  margin: 0.5cm 10px 0.5cm auto!important;
+	  zoom: 0.8;
+	}    */
+}
+
+
+
+
+
+.commG>div
+{
+    margin-left:0!important;
+}
+
+.DJa
+{
+    display:none!important;
+}
+
+
+
+/*
+  cards
+*/
+
+.card *
+{
+	font-size: 10px;
+	color: #676a6c!important;
+}
+
+.card
+{
+	display: inline-block;
+	width: 2.5in;
+	min-width: 2.5in;
+	height: 3.5in;
+	background: maroon!important;
+	padding: 0;
+	font-size: 10px;	
+	position: relative;
+	margin:0px;	
+	vertical-align: top;	
+	text-align: left;	
+	z-index: 1;
+	margin:0 1px 1px 0;
+}
+
+.color-40 .card .front .body
+{
+	position: relative;
+}
+
+.color-40 .card .text i
+{
+	font-weight: bold;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	font-size: 14px;
+	color: maroon!important;
+}
+
+.color-40 .card .text, .color-40 .card * {  
+  font-size: 12px;
+  line-height: normal;  
+}
+
+.card .front,
+.card .back
+{
+	-webkit-transition: -webkit-transform 1s;
+	-moz-transition: -moz-transform 1s;
+	-o-transition: -o-transform 1s;
+	transition: transform 1s;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;	
+}
+
+.card.flip .front
+{
+	-webkit-transform: rotateY( 180deg );
+	-moz-transform: rotateY( 180deg );
+	-o-transform: rotateY( 180deg );
+	transform: rotateY( 180deg );	
+}
+
+.card.flip .back
+{
+	-webkit-transform: rotateY( 0deg );
+	-moz-transform: rotateY( 0deg );
+	-o-transform: rotateY( 0deg );
+	transform: rotateY( 0deg );		
+}
+
+.card .front
+{	
+	height: 100%;
+	width: 100%;	
+	padding: 10px 10px 25px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	position: absolute;
+	top:0;
+	left: 0;
+}
+
+
+.card .back
+{	
+	height: 100%;
+	width: 100%;
+	padding: 10px 10px 10px;	
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	position: absolute;
+	top:0;
+	left: 0;	
+	-webkit-transform: rotateY( 180deg );
+	-moz-transform: rotateY( 180deg );
+	-o-transform: rotateY( 180deg );
+	transform: rotateY( 180deg );
+}
+
+.card .front .body
+{
+	background-color: #fff!important;
+	border-radius: 5px;
+	height: 100%;	
+	overflow: hidden;
+}
+
+.card .back .body
+{
+	background-color: #ededed!important;
+	border-radius: 5px;
+	height: 100%;	
+	overflow: hidden;	
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;	
+	padding: 15px 15px 15px;
+}
+
+.card .back .line
+{
+	border-radius: 7px;
+	height: 100%;
+	width: 100%;
+	border:4px solid maroon;	
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;	
+	overflow: hidden;
+	position: relative;
+	opacity: 0.8;
+}
+
+.card .back .line *
+{
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	-o-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+.card .name
+{	
+	font-size: 14px; 
+	line-height: 20px;
+	padding: 2px 5px;
+	margin: 0;
+	text-transform: uppercase;
+	text-align: center;
+	min-height: 20px;
+}
+
+.card .status
+{
+	list-style: none;	
+	text-align: center;
+	padding: 0;	
+	margin: 0;
+}
+
+.card .lined
+{
+	border-bottom: 2px solid maroon;	
+}
+
+.card .status li
+{
+	padding: 2px 4px;
+	float: left;
+	vertical-align: top;
+	font-size: 9px;
+	line-height: 9px;
+	min-height: 25px;
+	width: 50%;	
+	margin: 0;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+.card .status li.second
+{
+	border-left: 2px solid maroon;
+}
+
+.card .status li em
+{
+	font-style: normal;
+	text-transform: uppercase;
+	display: block;	
+	color: maroon!important;
+	font-weight: bold;
+	padding-bottom: 2px;
+}
+
+.card .need
+{
+	color: #fff!important;
+	background-color: maroon!important;
+	display: block;
+	padding: 2px 4px 4px;
+	font-weight: normal;
+	font-style: italic;
+	line-height: 100%;
+}
+
+.card .text
+{
+	padding: 2px 4px;
+	font-size: 10px;
+	line-height: 9px;
+	margin: 0;
+}
+
+.card .text.smtext
+{
+	font-size: 9px;	
+	line-height: 8.5px;
+}
+
+.card .text.smm
+{
+	font-size: 8px;	
+	line-height: 8px;
+}
+
+.card .class
+{
+	position: absolute;
+	bottom: 8px;
+	color: #fff!important;
+	left: 10px;
+	font-size: 9px;
+	font-weight: normal;
+}
+
+.card .type
+{
+	position: absolute;
+	bottom: 8px;
+	color: #fff!important;
+	right: 10px;
+	font-size: 10px;
+	font-weight: normal;
+}
+
+.card .level-1
+{
+	font-size: 40px;
+	color: maroon!important;
+	position: absolute;
+	top: 0px;
+	right: 5px;
+	display: block;
+	text-align: right;
+}
+
+.card .level-2
+{
+	font-size: 40px;
+	color: maroon!important;
+	position: absolute;
+	bottom: 0px;
+	left: 5px;
+	display: block;	
+	text-align: left;
+}
+
+.card .b-lt,
+.card .b-rt,
+.card .b-lb,
+.card .b-rb
+{	
+	border-bottom:2px solid maroon;
+	border-top:2px solid maroon;
+	height: 10px;
+	width: 200%;
+	position: absolute;
+    zoom: 1;
+	font-size: 18px;
+	line-height: 0px;
+	color: maroon!important;   
+	margin-top: -21px;
+	margin-bottom: -21px;		
+	z-index: 2;
+}
+
+.card .b-lt:before,
+.card .b-rt:before,
+.card .b-lb:before,
+.card .b-rb:before
+{
+	font-family: "rpg-icons";
+	display: block;
+	width: 100%;	
+	height: 11px;
+	font-size: 13px;	
+	margin-top: 0;
+	font-style: normal;
+	overflow: hidden;
+	position: relative;
+	line-height: 12px;
+	content: "                                                                                                    ";
+}
+
+.card .b-lt:after,
+.card .b-rt:after,
+.card .b-lb:after,
+.card .b-rb:after
+{
+	font-family: "rpg-icons";
+	display: block;
+	width: 100%;	
+	height: 11px;
+	font-style: normal;
+	font-size: 13px;	
+	margin-top: 0;
+	overflow: hidden;
+	position: relative;
+	line-height: 12px;	
+	margin-top: -24px;	
+	content: "                                                                                                    ";
+}
+
+
+.card .b-lb:before,
+.card .b-rb:before,
+.card .b-lb:after,
+.card .b-rb:after
+{
+	-webkit-transform: rotate( 180deg );
+	-moz-transform: rotate( 180deg );
+	-o-transform: rotate( 180deg );
+	transform: rotate( 180deg );	
+}
+
+.card .b-lb:before,
+.card .b-rb:before{
+line-height: 17px;
+}
+
+.card .changed.b-lt:before,
+.card .changed.b-rt:before,
+.card .changed.b-lb:before,
+.card .changed.b-rb:before
+{
+	content:attr(data-before);
+}
+
+.card .changed2.b-lt:after,
+.card .changed2.b-rt:after,
+.card .changed2.b-lb:after,
+.card .changed2.b-rb:after
+{
+	content:attr(data-after);
+}
+
+.card .b-lt.hover,
+.card .b-rt.hover,
+.card .b-lt.select,
+.card .b-rt.select,
+.card .b-lb.hover,
+.card .b-rb.hover,
+.card .b-lb.select,
+.card .b-rb.select
+{
+	border-bottom-color:#333!important;
+}
+
+.card .b-lt.hover:before,
+.card .b-rt.hover:before,
+.card .b-lb.hover:after,
+.card .b-rb.hover:after,
+.card .b-lt.select:before,
+.card .b-rt.select:before,
+.card .b-lb.select:after,
+.card .b-rb.select:after
+{
+	color:#333;	
+}
+
+
+.classedit .card .b-lt,
+.classedit .card .b-rt,
+.classedit .card .b-lb,
+.classedit .card .b-rb
+{
+	cursor: pointer;
+}
+
+.card .b-lb:after,
+.card .b-rb:after
+{
+	margin-top: 1px;
+}
+
+
+.card .b-lt
+{
+ 	 -moz-transform: rotate(-55deg);  
+       -o-transform: rotate(-55deg);  
+  -webkit-transform: rotate(-55deg);  
+      -ms-transform: rotate(-55deg);  
+          transform: rotate(-55deg);  
+	left: -75%;
+	top: 25%;         
+}
+
+.card .b-rt
+{
+ 	 -moz-transform: rotate(55deg);  
+       -o-transform: rotate(55deg);  
+  -webkit-transform: rotate(55deg);  
+      -ms-transform: rotate(55deg);  
+          transform: rotate(55deg);  	
+	left: -25%;
+	top: 25%;        
+}
+
+.card .b-lb
+{
+ 	 -moz-transform: rotate(-55deg);  
+       -o-transform: rotate(-55deg);  
+  -webkit-transform: rotate(-55deg);  
+      -ms-transform: rotate(-55deg);  
+          transform: rotate(-55deg);  
+	left: -25%;
+	bottom: 25%;             
+}
+
+.card .b-rb
+{
+ 	 -moz-transform: rotate(55deg);  
+       -o-transform: rotate(55deg);  
+  -webkit-transform: rotate(55deg);  
+      -ms-transform: rotate(55deg);  
+          transform: rotate(55deg); 
+	left: -75%;
+	bottom: 25%;               
+}
+
+.card .icon,
+.card .icon-top,
+.card .icon-bot
+{
+	font-family: 'rpg-icons'!important;
+	font-size: 100px;
+	position: absolute;
+	top: 50%;
+	margin-top: -75px;
+	width: 100%;
+	text-align: center;
+	font-style: normal;
+	color: maroon!important;
+	height: 150px;
+	line-height: 150px;
+}
+
+.classedit .card .icon,
+.classedit .card .icon-top,
+.classedit .card .icon-bot
+{
+	cursor: pointer;
+	min-height: 50px;
+}
+
+.classedit .card .icon:hover,
+.classedit .card .icon-top:hover,
+.classedit .card .icon-bot:hover,
+.classedit .card .icon.select,
+.classedit .card .icon-top.select,
+.classedit .card .icon-bot.select
+{
+	color:#000!important;
+}
+
+.gameicon
+{
+	font-family: 'rpg-icons'!important;
+}
+
+.card .icon-top
+{
+	font-size: 50px;
+	top: 12%;
+	height: auto;
+	line-height: 100%;
+	margin:0;
+}
+
+.card .icon-bot
+{
+	font-size: 50px;
+	top:auto;
+	bottom: 12%;	
+	height: auto;
+	line-height: 100%;
+	margin:0;
+}
+
+/*joester mode*/
+
+    html .joesterMode .card
+    {
+        width:5in;
+    }
+    html .joesterMode .card .front, html .joesterMode .card .back
+    {
+        width:2.5in;
+    }    
+    html .joesterMode .card .back
+    {
+    	left: auto;
+    	right:0;
+    	-webkit-transform: rotateY( 0deg );
+		-moz-transform: rotateY( 0deg );
+		-o-transform: rotateY( 0deg );
+		transform: rotateY( 0deg );
+    }
+
+    html .joesterMode .page
+    {
+        transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+        -o-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+    }
+    html .joesterMode .page .cardBack
+    {
+        transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+        -o-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+    }        
+
+    /*flip*/
+
+	.card.flipped .back {
+		-webkit-transform: rotateY( 0deg );
+		-moz-transform: rotateY( 0deg );
+		-o-transform: rotateY( 0deg );
+		transform: rotateY( 0deg );
+	}	
+
+	.card.flipped .front {
+		-webkit-transform: rotateY( 180deg );
+		-moz-transform: rotateY( 180deg );
+		-o-transform: rotateY( 180deg );
+		transform: rotateY( 180deg );
+	}	
+
+
+
+/*mirror*/
+
+.mirrorpage
+{	
+	display: none;	
+}
+
+.showAll .page
+{
+	display: none;	
+}
+html .showAll .mirrorpage
+{	
+	display: block;	
+}
+
+
+.mirror
+{	
+    transform: scale(-1, 1);
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+}
+.mirror .card.flip .back {
+	transform: scale(-1, 1);
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+}
+
+.subpage
+{
+	padding:0.1cm;
+}
+
+.showAll .noprint
+{
+	display: none;
+}
+
+
+
+/*print common*/
+
+@media print {
+
+	body
+	{
+		background-color: transparent;
+	}
+
+	html .card
+	{
+		margin:0 1px 1px 0;
+	}
+
+	html .showAll .page
+	{
+		display: block;	
+	}	
+
+    html .spellbook .page, 
+    html .page {
+        margin: 0!important;
+        border: initial!important;
+        border-radius: initial!important;
+        width: initial!important;
+        min-height: initial!important;
+        box-shadow: initial!important;
+        background: initial!important;
+        page-break-after: always!important;
+    }  
+
+	html body .page {
+	    margin: 0!important;
+	    padding:0;
+	    width: 208mm!important;
+	    /* full: 210.0mm; */	
+		height: 266mm!important;
+		/* full: 297.0mm; */
+	}
+
+    html .page.sec
+    {
+    	padding-top: 1.2cm!important;
+    }
+
+	html .joesterMode .page {
+	    margin: 0!important;
+	    padding:0!important;
+	    width: 100%;	    
+		height: 168mm;	
+		zoom:0.93!important;			
+	}
+
+	
+	.tools, .thanks, .home, .downloadlink, .create, .downloadlink, .noprint
+	{
+		display:none!important;
+	}
+	
+	html .subpage
+	{
+		margin-left:0;
+	}
+	
+	.editing .card
+	{
+	    display:none;
+	}
+	
+	.editing .card.select
+	{
+	    display:inline-block;
+	}
+	
+	.card.select
+	{
+        outline: 0;
+        background-color: transparent;
+        opacity: 1;	    
+	}
+
+
+	html .mirrorpage
+	{	
+		display: block!important;
+		padding-left:0!important;
+		padding-right:0.2cm!important;
+		padding-top:0.05cm!important;
+	}
+
+	html .joesterMode .mirrorpage {
+	    display: none!important;	
+	}
+
+
+	
+}    
+
+
+
+/*CLASSES*/
+
+	.card.class-1,
+	.card.class-1 .need
+	{
+		background-color:maroon!important;
+	}
+
+	.card.class-1 .back .body *
+	{
+		color:maroon!important;
+	}
+
+
+	.card.class-1 .back .line,
+	.card.class-1 .lined,
+	.card.class-1 .status li.second,
+	.card.class-1 .b-lt,
+	.card.class-1 .b-rt,
+	.card.class-1 .b-lb,
+	.card.class-1 .b-rb
+	{
+		border-color:maroon!important;
+	}
+
+	.card.class-1 .status li em,
+	.card.class-1 .level-1,
+	.card.class-1 .level-2,
+	.card.class-1 .b-lt,
+	.card.class-1 .b-rt,
+	.card.class-1 .b-lb,
+	.card.class-1 .b-rb,
+	.card.class-1 .icon,
+	.card.class-1 .icon-top,
+	.card.class-1 .icon-bot,	
+	.class-1 .body .b-lt:after,
+	.class-1 .body .b-rt:after,
+	.class-1 .body .b-lb:after,
+	.class-1 .body .b-rb:after,
+	.class-1 .body .b-lt:before,
+	.class-1 .body .b-rt:before,
+	.class-1 .body .b-lb:before,
+	.class-1 .body .b-rb:before
+	{
+		color:maroon!important;
+	}
+
+
+
+	.card.class-2,
+	.card.class-2 .need
+	{
+		background-color:#8c5385!important;
+	}
+
+	.card.class-2 .back .body *
+	{
+		color:#8c5385!important;
+	}
+
+
+	.card.class-2 .back .line,
+	.card.class-2 .lined,
+	.card.class-2 .status li.second,
+	.card.class-2 .b-lt,
+	.card.class-2 .b-rt,
+	.card.class-2 .b-lb,
+	.card.class-2 .b-rb
+	{
+		border-color:#8c5385!important;
+	}
+
+	.card.class-2 .status li em,
+	.card.class-2 .level-1,
+	.card.class-2 .level-2,
+	.card.class-2 .b-lt,
+	.card.class-2 .b-rt,
+	.card.class-2 .b-lb,
+	.card.class-2 .b-rb,
+	.card.class-2 .icon,
+	.card.class-2 .icon-top,
+	.card.class-2 .icon-bot,
+	.class-2 .body .b-lt:after,
+	.class-2 .body .b-rt:after,
+	.class-2 .body .b-lb:after,
+	.class-2 .body .b-rb:after,
+	.class-2 .body .b-lt:before,
+	.class-2 .body .b-rt:before,
+	.class-2 .body .b-lb:before,
+	.class-2 .body .b-rb:before
+	{
+		color:#8c5385!important;
+	}
+
+
+	.card.class-3,
+	.card.class-3 .need
+	{
+		background-color:#ffad46!important;
+	}
+
+	.card.class-3 .back .body *
+	{
+		color:#ffad46!important;
+	}
+
+
+	.card.class-3 .back .line,
+	.card.class-3 .lined,
+	.card.class-3 .status li.second,
+	.card.class-3 .b-lt,
+	.card.class-3 .b-rt,
+	.card.class-3 .b-lb,
+	.card.class-3 .b-rb
+	{
+		border-color:#ffad46!important;
+	}
+
+	.card.class-3 .status li em,
+	.card.class-3 .level-1,
+	.card.class-3 .level-2,
+	.card.class-3 .b-lt,
+	.card.class-3 .b-rt,
+	.card.class-3 .b-lb,
+	.card.class-3 .b-rb,
+	.card.class-3 .icon,
+	.card.class-3 .icon-top,
+	.card.class-3 .icon-bot,
+	.class-3 .body .b-lt:after,
+	.class-3 .body .b-rt:after,
+	.class-3 .body .b-lb:after,
+	.class-3 .body .b-rb:after,
+	.class-3 .body .b-lt:before,
+	.class-3 .body .b-rt:before,
+	.class-3 .body .b-lb:before,
+	.class-3 .body .b-rb:before
+	{
+		color:#ffad46!important;
+	}
+
+
+	.card.class-4,
+	.card.class-4 .need
+	{
+		background-color:#60b85d!important;
+	}
+
+	.card.class-4 .back .body *
+	{
+		color:#60b85d!important;
+	}
+
+
+	.card.class-4 .back .line,
+	.card.class-4 .lined,
+	.card.class-4 .status li.second,
+	.card.class-4 .b-lt,
+	.card.class-4 .b-rt,
+	.card.class-4 .b-lb,
+	.card.class-4 .b-rb
+	{
+		border-color:#60b85d!important;
+	}
+
+	.card.class-4 .status li em,
+	.card.class-4 .level-1,
+	.card.class-4 .level-2,
+	.card.class-4 .b-lt,
+	.card.class-4 .b-rt,
+	.card.class-4 .b-lb,
+	.card.class-4 .b-rb,
+	.card.class-4 .icon,
+	.card.class-4 .icon-top,
+	.card.class-4 .icon-bot,
+	.class-4 .body .b-lt:after,
+	.class-4 .body .b-rt:after,
+	.class-4 .body .b-lb:after,
+	.class-4 .body .b-rb:after,
+	.class-4 .body .b-lt:before,
+	.class-4 .body .b-rt:before,
+	.class-4 .body .b-lb:before,
+	.class-4 .body .b-rb:before
+	{
+		color:#60b85d!important;
+	}
+
+
+	.card.class-5,
+	.card.class-5 .need
+	{
+		background-color:#3bafb1!important;
+	}
+
+	.card.class-5 .back .body *
+	{
+		color:#3bafb1!important;
+	}
+
+
+	.card.class-5 .back .line,
+	.card.class-5 .lined,
+	.card.class-5 .status li.second,
+	.card.class-5 .b-lt,
+	.card.class-5 .b-rt,
+	.card.class-5 .b-lb,
+	.card.class-5 .b-rb
+	{
+		border-color:#3bafb1!important;
+	}
+
+	.card.class-5 .status li em,
+	.card.class-5 .level-1,
+	.card.class-5 .level-2,
+	.card.class-5 .b-lt,
+	.card.class-5 .b-rt,
+	.card.class-5 .b-lb,
+	.card.class-5 .b-rb,
+	.card.class-5 .icon,
+	.card.class-5 .icon-top,
+	.card.class-5 .icon-bot,
+	.class-5 .body .b-lt:after,
+	.class-5 .body .b-rt:after,
+	.class-5 .body .b-lb:after,
+	.class-5 .body .b-rb:after,
+	.class-5 .body .b-lt:before,
+	.class-5 .body .b-rt:before,
+	.class-5 .body .b-lb:before,
+	.class-5 .body .b-rb:before
+	{
+		color:#3bafb1!important;
+	}
+
+
+	.card.class-6,
+	.card.class-6 .need
+	{
+		background-color:#857056!important;
+	}
+
+	.card.class-6 .back .body *
+	{
+		color:#857056!important;
+	}
+
+
+	.card.class-6 .back .line,
+	.card.class-6 .lined,
+	.card.class-6 .status li.second,
+	.card.class-6 .b-lt,
+	.card.class-6 .b-rt,
+	.card.class-6 .b-lb,
+	.card.class-6 .b-rb
+	{
+		border-color:#857056!important;
+	}
+
+	.card.class-6 .status li em,
+	.card.class-6 .level-1,
+	.card.class-6 .level-2,
+	.card.class-6 .b-lt,
+	.card.class-6 .b-rt,
+	.card.class-6 .b-lb,
+	.card.class-6 .b-rb,
+	.card.class-6 .icon,
+	.card.class-6 .icon-top,
+	.card.class-6 .icon-bot,
+	.class-6 .body .b-lt:after,
+	.class-6 .body .b-rt:after,
+	.class-6 .body .b-lb:after,
+	.class-6 .body .b-rb:after,
+	.class-6 .body .b-lt:before,
+	.class-6 .body .b-rt:before,
+	.class-6 .body .b-lb:before,
+	.class-6 .body .b-rb:before
+	{
+		color:#857056!important;
+	}
+
+
+	.card.class-7,
+	.card.class-7 .need
+	{
+		background-color:#8c5385!important;
+	}
+
+	.card.class-7 .back .body *
+	{
+		color:#8c5385!important;
+	}
+
+
+	.card.class-7 .back .line,
+	.card.class-7 .lined,
+	.card.class-7 .status li.second,
+	.card.class-7 .b-lt,
+	.card.class-7 .b-rt,
+	.card.class-7 .b-lb,
+	.card.class-7 .b-rb
+	{
+		border-color:#8c5385!important;
+	}
+
+	.card.class-7 .status li em,
+	.card.class-7 .level-1,
+	.card.class-7 .level-2,
+	.card.class-7 .b-lt,
+	.card.class-7 .b-rt,
+	.card.class-7 .b-lb,
+	.card.class-7 .b-rb,
+	.card.class-7 .icon,
+	.card.class-7 .icon-top,
+	.card.class-7 .icon-bot,
+	.class-7 .body .b-lt:after,
+	.class-7 .body .b-rt:after,
+	.class-7 .body .b-lb:after,
+	.class-7 .body .b-rb:after,
+	.class-7 .body .b-lt:before,
+	.class-7 .body .b-rt:before,
+	.class-7 .body .b-lb:before,
+	.class-7 .body .b-rb:before
+	{
+		color:#8c5385!important;
+	}
+
+
+	.card.class-8,
+	.card.class-8 .need
+	{
+		background-color:rgb(248, 58, 34)!important;
+	}
+
+	.card.class-8 .back .body *
+	{
+		color:rgb(248, 58, 34)!important;
+	}
+
+
+	.card.class-8 .back .line,
+	.card.class-8 .lined,
+	.card.class-8 .status li.second,
+	.card.class-8 .b-lt,
+	.card.class-8 .b-rt,
+	.card.class-8 .b-lb,
+	.card.class-8 .b-rb
+	{
+		border-color:rgb(248, 58, 34)!important;
+	}
+
+	.card.class-8 .status li em,
+	.card.class-8 .level-1,
+	.card.class-8 .level-2,
+	.card.class-8 .b-lt,
+	.card.class-8 .b-rt,
+	.card.class-8 .b-lb,
+	.card.class-8 .b-rb,
+	.card.class-8 .icon,
+	.card.class-8 .icon-top,
+	.card.class-8 .icon-bot,
+	.class-8 .body .b-lt:after,
+	.class-8 .body .b-rt:after,
+	.class-8 .body .b-lb:after,
+	.class-8 .body .b-rb:after,
+	.class-8 .body .b-lt:before,
+	.class-8 .body .b-rt:before,
+	.class-8 .body .b-lb:before,
+	.class-8 .body .b-rb:before
+	{
+		color:rgb(248, 58, 34)!important;
+	}
+
+
+	.card.class-99,
+	.card.class-99 .need
+	{
+		background-color:#4986e7!important;
+	}
+
+	.card.class-99 .back .body *
+	{
+		color:#4986e7!important;
+	}
+
+
+	.card.class-99 .back .line,
+	.card.class-99 .lined,
+	.card.class-99 .status li.second,
+	.card.class-99 .b-lt,
+	.card.class-99 .b-rt,
+	.card.class-99 .b-lb,
+	.card.class-99 .b-rb
+	{
+		border-color:#4986e7!important;
+	}
+
+	.card.class-99 .status li em,
+	.card.class-99 .level-1,
+	.card.class-99 .level-2,
+	.card.class-99 .b-lt,
+	.card.class-99 .b-rt,
+	.card.class-99 .b-lb,
+	.card.class-99 .b-rb,
+	.card.class-99 .icon,
+	.card.class-99 .icon-top,
+	.card.class-99 .icon-bot,
+	.class-99 .body .b-lt:after,
+	.class-99 .body .b-rt:after,
+	.class-99 .body .b-lb:after,
+	.class-99 .body .b-rb:after,
+	.class-99 .body .b-lt:before,
+	.class-99 .body .b-rt:before,
+	.class-99 .body .b-lb:before,
+	.class-99 .body .b-rb:before
+	{
+		color:#4986e7!important;
+	}	
+
+
+/* editor */
+
+input[name="name"]
+{
+	width: 100%;
+	font-size: 13px;
+	text-align: center;
+}
+input[name="time"], input[name="range"], input[name="comp"], input[name="dur"]
+{
+	width: 100%;
+	font-size: 11px;
+	text-align: center;
+}
+
+textarea[name="mats"]
+{
+	width: 100%;
+	font-size: 11px;	
+	height: 19px;
+}
+
+textarea[name="text"]
+{
+	width: 100%;
+	height: 178px;
+	font-size: 9px;	
+	line-height: 9px;
+}
+input[name="type"]
+{
+
+}
+input[name="level"]
+{
+	width: 26px;
+	font-size: 15px;
+	line-height: 40px;
+	text-align: center;
+}
+
+#cSpell {
+	width:5in;
+}
+
+#cSpell .front,
+#cSpell .back
+{
+	width:2.5in;
+}
+
+#cSpell .back
+{
+	left: auto;
+	right: 0;
+	-webkit-transform: rotateY( 0deg );
+	-moz-transform: rotateY( 0deg );
+	-o-transform: rotateY( 0deg );
+	transform: rotateY( 0deg );
+}
+
+#SpellList
+{
+	list-style: none;
+	padding: 0;
+}
+
+#SpellList li
+{
+	background: #D3D3D3;
+	font-size: 13px;
+	padding: 5px 8px;
+	margin-bottom: 1px;
+	min-height: 25px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	position: relative;
+}
+
+#SpellList li textarea
+{	
+	visibility: hidden;
+	height: 0px;
+	width: 0px;
+	margin: 0;
+	padding: 0;
+}
+
+#SpellList li .del,
+#SpellList li .show
+{
+	font-family: Verdana;
+	color:Maroon;
+	font-size: 18px;
+	cursor: pointer;
+	opacity: 0.7;
+	position: absolute;
+	right: 5px;
+	top:1px;
+}
+
+#SpellList li .del:hover,
+#SpellList li .show:hover
+{
+	opacity: 1;	
+}
+
+#SpellList li .show
+{	
+	color:#000;
+	right:25px;
+}
+
+@media screen and (max-width: 1350px){
+	.mon-ed .page,
+	.car-ed .page {
+		margin: 2cm auto 1cm auto;
+		zoom: 0.6;
+	}
+
+}
+
+.mon-ed .tools-div,
+.car-ed .tools-div {
+	padding: 8px;
+}
+
+
+
+
+.subpage
+{
+	font-size: 14px;
+}
