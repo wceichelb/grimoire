@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template
+from flask import render_template, g, url_for
 
 @app.route('/')
 @app.route('/index')
@@ -10,3 +10,7 @@ def index():
 def spell():
     return render_template('spell.html')
 
+@app.route('/spellbook')
+@app.route('/spellbook/<user>')
+def spellbook(user=None):
+    return render_template('spellbook.html', user=user)

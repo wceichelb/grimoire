@@ -6,6 +6,22 @@
   </head>
   <body>
     <div class="container">
+      <div class="navbar">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="navbar-brand" href="#">Grimoire</a>
+        <ul>
+          {% if g.user.is_authenticated() %}
+          <li><a href="{{ url_for('login') }}">Log In</a></li>
+          <li><a href="{{ url_for('spellbook', user=g.user) }}">My Grimoire</a></li>
+          {% else %}
+          <li><a href="{{ url_for('spellbook') }}">All Spells</a></li>
+          {% endif %}
+        </ul>
+      </div>
       {% block content %}{% endblock %}
     </div>
   </body>
