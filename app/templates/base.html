@@ -2,27 +2,33 @@
 <html>
   <head>
     <title>Grimoire</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
   </head>
   <body>
     <div class="container">
       <div class="navbar">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-        <a class="navbar-brand" href="#">Grimoire</a>
-        <ul>
-          {% if g.user.is_authenticated() %}
-          <li><a href="{{ url_for('login') }}">Log In</a></li>
-          <li><a href="{{ url_for('spellbook', user=g.user) }}">My Grimoire</a></li>
-          {% else %}
-          <li><a href="{{ url_for('spellbook') }}">All Spells</a></li>
-          {% endif %}
-        </ul>
+        <div class="navbar-inner">
+          <!-- <a class="btn btn&#45;navbar" data&#45;toggle="collapse" data&#45;target=".nav&#45;collapse"> -->
+          <!--   <span class="icon&#45;bar"></span> -->
+          <!--   <span class="icon&#45;bar"></span> -->
+          <!--   <span class="icon&#45;bar"></span> -->
+          <!-- </a> -->
+          <a class="navbar-brand" href="{{ url_for('index') }}">Grimoire</a>
+          <ul class="nav">
+            {% if g.user.is_authenticated %}
+            <li><a href="{{ url_for('spellbook', user=g.user) }}">My Grimoire</a></li>
+            {% else %}
+            <li><a href="{{ url_for('login') }}">Log In</a></li>
+            <li>you need to login, bro</li>
+            {% endif %}
+          </ul>
+        </div>
       </div>
-      {% block content %}{% endblock %}
+      <div class="row">
+        <div class="span12">
+          {% block content %}{% endblock %}
+        </div>
+      </div>
     </div>
   </body>
 </html>

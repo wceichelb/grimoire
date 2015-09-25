@@ -1,27 +1,21 @@
-{% extends "base.html" %}
-{% block content %}
   <div class="container">
     <div class="card cardBlock class-3">
       <div class="front">
         <div class="body">
-          <h3 class="name lined srname">Guidance</h3>
+          <h3 class="name lined srname">{{ spell.spell_name }}</h3>
           <ul class="status lined">
-            <li><em>casting time</em>1 action</li>
-            <li class="second"><em>range</em>Touch</li>
+            <li><em>casting time</em>{{ spell.casting_time }}</li>
+            <li class="second"><em>range</em>{{ spell.range }}</li>
           </ul>
           <ul class="status lined">
-            <li><em>components</em>V, S</li>
-            <li class="second small"><em>duration</em>Concentration, up to 1 minute</li>
+            <li><em>components</em>{{ spell.components }}</li>
+            <li class="second small"><em>duration</em>{{ spell.duration }}</li>
             <br clear="all">
           </ul>
-          <p class="text">You touch one willing creature. Once before the spell
-            ends, the target can roll a d4 and add the number rolled to one
-            ability check of its choice. It can roll the die before or after
-            making the ability check. The spell then ends.</p>
+          <p class="text">{{ spell.description }}</p>
         </div>
-        <b class="class srclass">Cleric</b>
-        <b class="type srtype">Divination Cantrip</b>
+        <b class="class srclass">{{ spell.caster_class }}</b>
+        <b class="type srtype">{{ spell.school }}</b>
       </div>
     </div>
   </div>
-{% endblock %}

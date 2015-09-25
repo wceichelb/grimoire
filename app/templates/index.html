@@ -1,8 +1,22 @@
 {% extends "base.html" %}
+
 {% block content %}
-  {% if current_user %}
-    {{ current_user }}
-  {% else %}
-    no login
-  {% endif %}
+  <div>
+    <h1>{{ g.user.char_name }}</h1>
+    {% if current_user.is_authenticated %}
+      {{ current_user }}
+    {% else %}
+      {% for spell in spells.items %}
+        {% include 'spell.html' %}
+      {% endfor %}
+      <ul class="pager">
+        {% if spells.has_prev %}
+        <li class="previous"><a href="{{ url_for('index', page=spells.prev_num) }}">&lt;&lt;</a></li>
+        {% endif %}
+        {% if spells.has_next %}
+        <li class="next"><a href="{{ url_for('index', page=spells.next_num) }}">&gt;&gt;</a></li>
+        {% endif %}
+      </ul>
+    {% endif %}
+  </div>
 {% endblock %}
