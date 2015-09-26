@@ -7,6 +7,10 @@ from .forms import LoginForm
 from .models import User, Spell
 from config import SPELLS_PER_PAGE
 
+@lm.user_loader
+def load_user(id):
+    return User.query.get(int(id))
+
 @app.before_request
 def before_request():
     g.user = current_user
@@ -25,8 +29,10 @@ def before_request():
 @app.route('/index')
 @app.route('/index<int:page>')
 def index(page=1):
+    user = g.user
     spells = Spell.query.paginate(page, SPELLS_PER_PAGE, False)
     return render_template('index.html',
+                           user=user,
                            spells=spells
                            )
 
@@ -49,10 +55,15 @@ def login():
     form = LoginForm()
     if form.validate_on_submit():
         session['remember_me'] = form.remember_me.data
-        return oid.try_login(form.openid.data, ask_for=['char_name'])
+        # return oid.try_login(form.openid.data, ask_for=['char_name'])
     return render_template('login.html',
                            form=form,
                            providers=app.config['OPENID_PROVIDERS'])
+
+@app.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
 
 @oid.after_login
 def after_login(resp):
@@ -73,7 +84,3 @@ def after_login(resp):
         session.pop('remember_me', None)
     login_user(user, remember = remember_me)
     return redirect(request.args.get('next') or url_for('index'))
-
-@lm.user_loader
-def load_user(id):
-    return User.query.get(int(id))
