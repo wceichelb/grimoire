@@ -29,7 +29,7 @@ class OAuthSignIn(object):
             for provider_class in self.__subclasses__():
                 provider = provider_class()
                 self.providers[provider.provider_name] = provider
-            return self.providers[provider_name]
+        return self.providers[provider_name]
 
 class GoogleSignIn(OAuthSignIn):
     def __init__(self):
