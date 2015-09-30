@@ -1,9 +1,13 @@
 from app import db
+from flask.ext.login import UserMixin
 
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True, nullable=False)
-    email = db.Column(db.String(120), index=True, unique=True)
-    char_name = db.Column(db.String(64), index=True, unique=True)
+class User(UserMixin, db.Model):
+    __tablename__ = 'user'
+    id = db.Column(db.Integer, primary_key=True)
+    social_id = db.Column(db.String(64), nullable=False, unique=True)
+    nickname = db.Column(db.String(64), nullable=False)
+    char_name = db.Column(db.String(64), index=True)
+    email = db.Column(db.String(64), nullable=True)
     spellbook = db.relationship('Spellbook', backref="user")
 
     @property
@@ -25,6 +29,7 @@ class User(db.Model):
         return '<User %r>' % (self.char_name)
 
 class Spellbook(db.Model):
+    __tablename__ = 'spellbook'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
@@ -32,6 +37,7 @@ class Spellbook(db.Model):
         return "<Spellbook %r>" % (self.user.char_name)
 
 class Spell(db.Model):
+    __tablename__ = 'spell'
     id = db.Column(db.Integer, primary_key=True)
     level = db.Column(db.Integer)
     spell_name = db.Column(db.String)
