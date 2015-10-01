@@ -1,12 +1,11 @@
 from app import db
 from flask.ext.login import UserMixin
 
-class User(UserMixin, db.Model):
+class User(db.Model):
     __tablename__ = 'user'
     id = db.Column(db.Integer, primary_key=True)
-    social_id = db.Column(db.String(64), nullable=False, unique=True)
     nickname = db.Column(db.String(64), nullable=False)
-    char_name = db.Column(db.String(64), index=True)
+    char_name = db.Column(db.String(64), index=True, nullable=True)
     email = db.Column(db.String(64), nullable=True)
     spellbook = db.relationship('Spellbook', backref="user")
 
@@ -26,7 +25,7 @@ class User(UserMixin, db.Model):
         return unicode(self.id)
 
     def __repr__(self):
-        return '<User %r>' % (self.char_name)
+        return '<User %r>' % (self.nickname)
 
 class Spellbook(db.Model):
     __tablename__ = 'spellbook'

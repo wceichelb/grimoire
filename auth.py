@@ -42,19 +42,28 @@ class GoogleSignIn(OAuthSignIn):
             client_secret=self.consumer_secret,
             authorize_url=google_params.get('authorization_endpoint'),
             base_url=google_params.get('userinfo_endpoint'),
-            access_token_url=google_params.get('token_endpoint')
+            access_token_url=google_params.get('token_endpoint'),
         )
 
     def authorize(self):
-        return redirect(self.service.get_authorize_url(
-            scope='email',
-            response_type='code',
-            redirect_uri=self.get_callback_url())
-        )
+        params = {
+            'scope':'email',
+            'response_type':'code',
+            'redirect_uri':self.get_callback_url(),
+            'access_type':'offline'
+        }
+        return redirect(self.service.get_authorize_url(**params))
 
     def callback(self):
         if 'code' not in request.args:
             return None, None, None
+        # oauth_session = self.service.get_raw_access_token(
+        #     data={'code': request.args['code'],
+        #           'grant_type': 'authorization_code',
+        #           'redirect_uri': self.get_callback_url()
+        #          }
+            # decoder = json.loads
+        # )
         oauth_session = self.service.get_auth_session(
             data={'code': request.args['code'],
                   'grant_type': 'authorization_code',

@@ -19,7 +19,6 @@
           <ul class="nav">
             {% if g.user.is_authenticated %}
             <li><a href="{{ url_for('logout') }}">Logout</a></li>
-            <li><a href="{{ url_for('spellbook', user=g.user) }}">My Grimoire</a></li>
             {% else %}
             <li><a href="{{ url_for('login') }}">Log In</a></li>
             <li>you need to login, bro</li>
